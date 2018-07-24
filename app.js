@@ -1,12 +1,12 @@
 const http = require('http')
-const server = Math.random().toString(36).substring(2, 15)
+const serverId = Math.random().toString(36).substring(2, 15)
 
 console.log('starting app');
 
-server = http.createServer(function (req, res) {
+const server = http.createServer(function (req, res) {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.write(JSON.stringify({
-      server,
+      serverId,
       path: req.url
     }));
     res.end();
