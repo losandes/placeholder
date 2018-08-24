@@ -2,6 +2,7 @@ const http = require('http')
 const serverId = Math.random().toString(36).substring(2, 15)
 
 console.log('starting app');
+console.log(`ENVIRONMENT: ${process.env.ENVIRONMENT}`
 
 const server = http.createServer(function (req, res) {
   if (req.url.indexOf('/error/') > -1) {
